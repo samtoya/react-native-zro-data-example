@@ -1,5 +1,5 @@
 {
-  "name": "aftownmusicZroData",
+  "name": "aftownmusic-zro-data",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,11 +7,13 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' |     sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82"
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-inappbrowser-reborn": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -21,7 +23,9 @@
     "eslint": "^6.7.2",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.57.0",
-    "react-test-renderer": "16.9.0"
+    "react-native-zro-data": "/Users/samtoya/Code/ReactNative/react-native-zro-data",
+    "react-test-renderer": "16.9.0",
+    "reactotron-react-native": "^4.0.2"
   },
   "jest": {
     "preset": "react-native"

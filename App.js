@@ -1,114 +1,163 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React from 'react';
+import React, {Component} from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar,
+  StyleSheet,
+  SafeAreaView,
+  Dimensions,
+  Alert,
+  NativeEventEmitter,
 } from 'react-native';
+import ZroData from 'react-native-zro-data';
+import Button from './src/components/Button';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+if (__DEV__) {
+  import('./config/ReactotronConfig');
+}
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
+import Reactotron from 'reactotron-react-native';
+
+export default class App extends Component {
+  state = {
+    message: 'Hi',
+    device: null,
+    sdkState: false,
+    status: '',
+    attributes: '',
+    initialized: false,
+  };
+
+  componentDidMount() {
+    const eventEmitter = new NativeEventEmitter(ZroData);
+    ZroData.getStatus(status => {
+      this.setState({status});
+    });
+    eventEmitter.addListener('zro-data-status', event => {
+      this.setState({status: event.status});
+    });
+  }
+
+  _initialize = () => {
+    ZroData.initialize('13cfad4b-89b9-4d41-aa5d-3f78e5d1f6fd', '64', '')
+      .then(response => {
+        this.setState({
+          status: response.status,
+          sdkState: response.initialized,
+        });
+        Reactotron.log('_initialize', response);
+      })
+      .catch(error => {
+        Alert.alert('Error!', error);
+      });
+  };
+
+  _startSession = async () => {
+    const response = await ZroData.startSession();
+    Reactotron.log('_startSession', response);
+  };
+
+  _stopSession = async () => {
+    const response = await ZroData.stopSession(false);
+    Reactotron.log('_stopSession', response);
+  };
+
+  _closeSession = async () => {
+    const response = await ZroData.closeSession();
+    Reactotron.log('_closeSession', response);
+  };
+
+  _setopSponsoredIPList = ips => {
+    Reactotron.log('_setopSponsoredIPList', ips);
+  };
+
+  _setPhoneNumber = async phone => {
+    const response = await ZroData.setPhoneNumber(phone);
+    Reactotron.log('_setopSponsoredIPList', response);
+  };
+
+  _getStatus = () => {
+    ZroData.getStatus(status => {
+      this.setState({status});
+      Reactotron.log('status', status);
+    });
+  };
+
+  render() {
+    return (
       <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+        <View style={styles.wrapper}>
+          <View style={styles.container}>
+            <Text style={styles.headerText}>Testing React Native ZroData</Text>
+
+            <View style={styles.infoContainer}>
+              <View style={styles.infoWrapper}>
+                <Text style={styles.infoTag}>SDK State:</Text>
+                <Text style={styles.infoText}>
+                  {this.state.sdkState ? 'Initialized' : 'Uninitalized'}
+                </Text>
+              </View>
+
+              <View style={styles.infoWrapper}>
+                <Text style={styles.infoTag}>Status:</Text>
+                <Text style={styles.infoText}>{this.state.status}</Text>
+              </View>
             </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
-        </ScrollView>
+
+          <View style={styles.buttonContainer}>
+            <Button
+              disabled={this.state.sdkState}
+              title={'Initialize SDK'}
+              onTap={this._initialize}
+            />
+            <Button title={'Start sponsorship'} onTap={this._startSession} />
+            <Button title={'Stop sponsorship'} onTap={this._stopSession} />
+            <Button title={'Close session'} onTap={this._closeSession} />
+            <Button title={'Get status'} onTap={this._getStatus} />
+            <Button title={'Open Browser'} onTap={() => {}} />
+          </View>
+        </View>
       </SafeAreaView>
-    </>
-  );
-};
+    );
+  }
+}
+
+const {height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  wrapper: {marginVertical: 0},
+  container: {
+    height: height * 0.28,
+    marginVertical: 0,
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    marginBottom: 30,
+    backgroundColor: '#db2642',
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  infoContainer: {
+    borderTopWidth: 1,
+    borderTopColor: 'white',
+    marginTop: 20,
+    paddingVertical: 10,
   },
-  body: {
-    backgroundColor: Colors.white,
+  infoWrapper: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    paddingHorizontal: 5,
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
+  infoTag: {
     fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+    color: 'white',
+    fontWeight: 'bold',
   },
-  highlight: {
-    fontWeight: '700',
+  infoText: {
+    fontSize: 18,
+    color: 'white',
   },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  headerText: {fontSize: 26, color: 'white'},
+  buttonContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    paddingHorizontal: 10,
   },
 });
-
-export default App;
