@@ -6,7 +6,6 @@ import {
   SafeAreaView,
   Dimensions,
   Alert,
-  NativeEventEmitter,
 } from 'react-native';
 import ZroData from 'react-native-zro-data';
 import Button from './src/components/Button';
@@ -28,11 +27,12 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    const eventEmitter = new NativeEventEmitter(ZroData);
     ZroData.getStatus(status => {
+      Reactotron.log('ZroData.getStatus', status);
       this.setState({status});
     });
-    eventEmitter.addListener('zro-data-status', event => {
+    ZroData.addListener('zro-data-status', event => {
+      Reactotron.log('ZroData.addListener', event.status);
       this.setState({status: event.status});
     });
   }

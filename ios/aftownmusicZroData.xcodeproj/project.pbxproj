@@ -16,10 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* aftownmusicZroDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* aftownmusicZroDataTests.m */; };
-		701F8D9961E6F612CFE2421F /* libPods-aftownmusicZroData-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14747C512E29A65F259E2F /* libPods-aftownmusicZroData-tvOS.a */; };
-		96ED76ABF79F3BFBADE50C83 /* libPods-aftownmusicZroData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7D3C4778680E7316EB863B /* libPods-aftownmusicZroData.a */; };
-		A37B38DBE800AD42DF02DE2E /* libPods-aftownmusicZroData-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A88B4D849E13379B3E7CB6F /* libPods-aftownmusicZroData-tvOSTests.a */; };
-		E9BA8F5A838A95BEF7532BA0 /* libPods-aftownmusicZroDataTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F04431036D714C4160E8B7 /* libPods-aftownmusicZroDataTests.a */; };
+		6752DB01E19768D1BBE568A0 /* Pods_aftownmusicZroData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186D655A02B792814F7EFFD7 /* Pods_aftownmusicZroData.framework */; };
+		686ED4730BB3AF29380DA64A /* Pods_aftownmusicZroDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003859BA42317892508227B3 /* Pods_aftownmusicZroDataTests.framework */; };
+		936E6BA4F3DAFE578AC4C741 /* Pods_aftownmusicZroData_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D116C3FC36440FC15B91BB06 /* Pods_aftownmusicZroData_tvOS.framework */; };
+		B949EF46A8E84ABB3A767FDF /* Pods_aftownmusicZroData_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA5D79A507E7FF709420141 /* Pods_aftownmusicZroData_tvOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003859BA42317892508227B3 /* Pods_aftownmusicZroDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aftownmusicZroDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* aftownmusicZroDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aftownmusicZroDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,21 +53,20 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = aftownmusicZroData/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = aftownmusicZroData/main.m; sourceTree = "<group>"; };
 		15B61A0555DBC29F11C2FC36 /* Pods-aftownmusicZroData-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroData-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroData-tvOSTests/Pods-aftownmusicZroData-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		186D655A02B792814F7EFFD7 /* Pods_aftownmusicZroData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aftownmusicZroData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* aftownmusicZroData-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aftownmusicZroData-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* aftownmusicZroData-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "aftownmusicZroData-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAB62D77F0D030B83F493E6 /* Pods-aftownmusicZroData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroData.debug.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroData/Pods-aftownmusicZroData.debug.xcconfig"; sourceTree = "<group>"; };
 		5B1FE5820213DDC939DC3AB0 /* Pods-aftownmusicZroData-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroData-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroData-tvOS/Pods-aftownmusicZroData-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6A88B4D849E13379B3E7CB6F /* libPods-aftownmusicZroData-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aftownmusicZroData-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1FF361B32DD19055F0ECCE /* Pods-aftownmusicZroData-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroData-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroData-tvOSTests/Pods-aftownmusicZroData-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6E14747C512E29A65F259E2F /* libPods-aftownmusicZroData-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aftownmusicZroData-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8142C3322E0A9343946E3E02 /* Pods-aftownmusicZroData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroData.release.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroData/Pods-aftownmusicZroData.release.xcconfig"; sourceTree = "<group>"; };
+		AAA5D79A507E7FF709420141 /* Pods_aftownmusicZroData_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aftownmusicZroData_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6F7BDCAA66BB4CECC771FD /* Pods-aftownmusicZroDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroDataTests.debug.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroDataTests/Pods-aftownmusicZroDataTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B2F04431036D714C4160E8B7 /* libPods-aftownmusicZroDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aftownmusicZroDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D116C3FC36440FC15B91BB06 /* Pods_aftownmusicZroData_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aftownmusicZroData_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF315C1702FBE77208D3D8 /* Pods-aftownmusicZroDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroDataTests.release.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroDataTests/Pods-aftownmusicZroDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		E7DDD652710B4152C7B861DF /* Pods-aftownmusicZroData-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aftownmusicZroData-tvOS.release.xcconfig"; path = "Target Support Files/Pods-aftownmusicZroData-tvOS/Pods-aftownmusicZroData-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FC7D3C4778680E7316EB863B /* libPods-aftownmusicZroData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aftownmusicZroData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9BA8F5A838A95BEF7532BA0 /* libPods-aftownmusicZroDataTests.a in Frameworks */,
+				686ED4730BB3AF29380DA64A /* Pods_aftownmusicZroDataTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ED76ABF79F3BFBADE50C83 /* libPods-aftownmusicZroData.a in Frameworks */,
+				6752DB01E19768D1BBE568A0 /* Pods_aftownmusicZroData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				701F8D9961E6F612CFE2421F /* libPods-aftownmusicZroData-tvOS.a in Frameworks */,
+				936E6BA4F3DAFE578AC4C741 /* Pods_aftownmusicZroData_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A37B38DBE800AD42DF02DE2E /* libPods-aftownmusicZroData-tvOSTests.a in Frameworks */,
+				B949EF46A8E84ABB3A767FDF /* Pods_aftownmusicZroData_tvOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				FC7D3C4778680E7316EB863B /* libPods-aftownmusicZroData.a */,
-				6E14747C512E29A65F259E2F /* libPods-aftownmusicZroData-tvOS.a */,
-				6A88B4D849E13379B3E7CB6F /* libPods-aftownmusicZroData-tvOSTests.a */,
-				B2F04431036D714C4160E8B7 /* libPods-aftownmusicZroDataTests.a */,
+				186D655A02B792814F7EFFD7 /* Pods_aftownmusicZroData.framework */,
+				D116C3FC36440FC15B91BB06 /* Pods_aftownmusicZroData_tvOS.framework */,
+				AAA5D79A507E7FF709420141 /* Pods_aftownmusicZroData_tvOSTests.framework */,
+				003859BA42317892508227B3 /* Pods_aftownmusicZroDataTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,7 +161,6 @@
 				AC6F7BDCAA66BB4CECC771FD /* Pods-aftownmusicZroDataTests.debug.xcconfig */,
 				D4BF315C1702FBE77208D3D8 /* Pods-aftownmusicZroDataTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +229,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				CAEEF25E6ED9EB0F8F8EC1EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +308,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -407,6 +408,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAEEF25E6ED9EB0F8F8EC1EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aftownmusicZroData/Pods-aftownmusicZroData-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/FBReactNativeSpec/FBReactNativeSpec.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/RCTTypeSafety/RCTTypeSafety.framework",
+				"${BUILT_PRODUCTS_DIR}/React-Core/React.framework",
+				"${BUILT_PRODUCTS_DIR}/React-CoreModules/CoreModules.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTActionSheet/RCTActionSheet.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTAnimation/RCTAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTBlob/RCTBlob.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTImage/RCTImage.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTLinking/RCTLinking.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTNetwork/RCTNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTSettings/RCTSettings.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTText/RCTText.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTVibration/RCTVibration.framework",
+				"${BUILT_PRODUCTS_DIR}/React-cxxreact/cxxreact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsi/jsi.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsiexecutor/jsireact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsinspector/jsinspector.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactCommon/ReactCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/react-native-zro-data/react_native_zro_data.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBReactNativeSpec.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTTypeSafety.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreModules.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTActionSheet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTBlob.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTLinking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTSettings.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTVibration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cxxreact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsireact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsinspector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_zro_data.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aftownmusicZroData/Pods-aftownmusicZroData-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDCBF87428C4E96C7FFC3D05 /* [CP] Check Pods Manifest.lock */ = {
